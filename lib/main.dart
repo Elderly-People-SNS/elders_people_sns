@@ -3,30 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'kakaotalkList.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const MainScreen(),
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.black,
-          primary: Colors.grey,
-          secondary: Colors.white,
-        ),
-        useMaterial3: true,
-      ),
-    );
-  }
-}
-
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -35,6 +11,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xf5f5f5f5),
       appBar: AppBar(
+        automaticallyImplyLeading: false, // 뒤로가기 자동생성 막기
         toolbarHeight: 64,
         backgroundColor: const Color(0xffffffff),
         title: const Text("이름 : 홍길동"),
