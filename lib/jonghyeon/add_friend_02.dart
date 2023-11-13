@@ -65,7 +65,8 @@ class EventBox extends StatelessWidget {
         children: [
           Positioned(
             left: 0,
-            top: 55,
+            top: 520,
+            
             child: Container(
               width: screenWidth, // 화면 전체 너비로 설정
               height: 76,
