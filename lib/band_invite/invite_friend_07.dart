@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'add_friend_03.dart';
-import 'add_friend_01.dart';
+import 'invite_friend_06.dart';
+import 'invite_friend_08.dart';
 
-class SecondScreen extends MyHomePage {
+class SeventhScreen extends SixthScreen {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: GestureDetector(
         onTap: () {
           _navigateToNextScreen(context);
@@ -14,7 +13,7 @@ class SecondScreen extends MyHomePage {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/kakaotalk/add_friend_02.png'),
+              image: AssetImage('assets/Band/9.png'),
               fit: BoxFit.cover,
             ),
           ),
@@ -43,7 +42,7 @@ class SecondScreen extends MyHomePage {
         tapPosition.dy <= eventBoxTop + eventBoxHeight) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => ThirdScreen()),
+        MaterialPageRoute(builder: (context) => EighthScreen()),
       );
     }
   }
@@ -53,24 +52,22 @@ class EventBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ThirdScreen()),
+          MaterialPageRoute(builder: (context) => EighthScreen()),
         );
       },
       child: Stack(
         children: [
           Positioned(
-            left: 0,
-            top: 520,
-            
+            left: 385,
+            top: 45,
             child: Container(
-              width: screenWidth, // 화면 전체 너비로 설정
-              height: 76,
-              color: Colors.blue.withOpacity(0.5),
+              width: 95,
+              height: 55,
+              color: Colors.blue.withOpacity(0),
             ),
           ),
         ],
@@ -78,5 +75,4 @@ class EventBox extends StatelessWidget {
     );
   }
 }
-
 

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'add_friend_03.dart';
-import 'add_friend_01.dart';
+import 'invite_friend_01.dart';
+import 'invite_friend_03.dart';
 
 class SecondScreen extends MyHomePage {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: GestureDetector(
         onTap: () {
           _navigateToNextScreen(context);
@@ -14,7 +13,7 @@ class SecondScreen extends MyHomePage {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/kakaotalk/add_friend_02.png'),
+              image: AssetImage('assets/Band/4.png'),
               fit: BoxFit.cover,
             ),
           ),
@@ -53,7 +52,6 @@ class EventBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -64,13 +62,12 @@ class EventBox extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            left: 0,
-            top: 520,
-            
+            left: 172,
+            top: 525,
             child: Container(
-              width: screenWidth, // 화면 전체 너비로 설정
-              height: 76,
-              color: Colors.blue.withOpacity(0.5),
+              width: 155,
+              height: 150,
+              color: Colors.blue.withOpacity(0),
             ),
           ),
         ],
@@ -78,5 +75,4 @@ class EventBox extends StatelessWidget {
     );
   }
 }
-
 
