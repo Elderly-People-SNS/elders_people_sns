@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'invite_friend_06.dart';
-import 'invite_friend_08.dart';
+import 'add_friend_04.dart';
+import 'add_friend_06.dart';
 
-class SeventhScreen extends SixthScreen {
+class FifthScreen extends FourthScreen {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: GestureDetector(
         onTap: () {
           _navigateToNextScreen(context);
@@ -13,7 +14,7 @@ class SeventhScreen extends SixthScreen {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/Band/9.png'),
+              image: AssetImage('assets/images/kakaotalk/add_friend_05.png'),
               fit: BoxFit.cover,
             ),
           ),
@@ -42,7 +43,7 @@ class SeventhScreen extends SixthScreen {
         tapPosition.dy <= eventBoxTop + eventBoxHeight) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => EighthScreen()),
+        MaterialPageRoute(builder: (context) => SixthScreen()),
       );
     }
   }
@@ -51,23 +52,22 @@ class SeventhScreen extends SixthScreen {
 class EventBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => EighthScreen()),
+          MaterialPageRoute(builder: (context) => SixthScreen()),
         );
       },
       child: Stack(
         children: [
           Positioned(
-            left: 385,
-            top: 45,
+            left: 380,
+            top: 82,
             child: Container(
-              width: 95,
-              height: 55,
-              color: Colors.blue.withOpacity(0),
+              width: 68,
+              height: 68,
+              color: Colors.blue.withOpacity(0.5),
             ),
           ),
         ],
@@ -75,4 +75,3 @@ class EventBox extends StatelessWidget {
     );
   }
 }
-

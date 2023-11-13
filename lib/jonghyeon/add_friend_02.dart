@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'invite_friend_06.dart';
-import 'invite_friend_08.dart';
+import 'add_friend_03.dart';
+import 'add_friend_01.dart';
 
-class SeventhScreen extends SixthScreen {
+class SecondScreen extends MyHomePage {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: GestureDetector(
         onTap: () {
           _navigateToNextScreen(context);
@@ -13,7 +14,7 @@ class SeventhScreen extends SixthScreen {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/Band/9.png'),
+              image: AssetImage('assets/images/kakaotalk/add_friend_02.png'),
               fit: BoxFit.cover,
             ),
           ),
@@ -42,7 +43,7 @@ class SeventhScreen extends SixthScreen {
         tapPosition.dy <= eventBoxTop + eventBoxHeight) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => EighthScreen()),
+        MaterialPageRoute(builder: (context) => ThirdScreen()),
       );
     }
   }
@@ -52,22 +53,23 @@ class EventBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => EighthScreen()),
+          MaterialPageRoute(builder: (context) => ThirdScreen()),
         );
       },
       child: Stack(
         children: [
           Positioned(
-            left: 385,
-            top: 45,
+            left: 0,
+            top: 55,
             child: Container(
-              width: 95,
-              height: 55,
-              color: Colors.blue.withOpacity(0),
+              width: screenWidth, // 화면 전체 너비로 설정
+              height: 76,
+              color: Colors.blue.withOpacity(0.5),
             ),
           ),
         ],
@@ -75,4 +77,5 @@ class EventBox extends StatelessWidget {
     );
   }
 }
+
 

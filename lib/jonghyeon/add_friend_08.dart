@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'invite_friend_06.dart';
-import 'invite_friend_08.dart';
+import 'add_friend_07.dart';
+import 'add_friend_09.dart';
 
-class SeventhScreen extends SixthScreen {
+class EighthScreen extends SeventhScreen {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: GestureDetector(
         onTap: () {
           _navigateToNextScreen(context);
@@ -13,7 +14,7 @@ class SeventhScreen extends SixthScreen {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/Band/9.png'),
+              image: AssetImage('assets/images/kakaotalk/add_friend_08.png'),
               fit: BoxFit.cover,
             ),
           ),
@@ -42,7 +43,7 @@ class SeventhScreen extends SixthScreen {
         tapPosition.dy <= eventBoxTop + eventBoxHeight) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => EighthScreen()),
+        MaterialPageRoute(builder: (context) => NinthScreen()),
       );
     }
   }
@@ -56,18 +57,18 @@ class EventBox extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => EighthScreen()),
+          MaterialPageRoute(builder: (context) => NinthScreen()),
         );
       },
       child: Stack(
         children: [
           Positioned(
-            left: 385,
-            top: 45,
+            left: 0,
+            top: 560,
             child: Container(
-              width: 95,
-              height: 55,
-              color: Colors.blue.withOpacity(0),
+              width: screenWidth,
+              height: 70,
+              color: Colors.blue.withOpacity(0.5),
             ),
           ),
         ],
@@ -75,4 +76,3 @@ class EventBox extends StatelessWidget {
     );
   }
 }
-
