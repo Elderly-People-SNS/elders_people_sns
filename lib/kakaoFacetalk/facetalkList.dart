@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:elderly_people_sns/kakaoFacetalk/facetalkList.dart';
+import 'package:elderly_people_sns/kakaoFacetalk/facetalk1-1.dart';
+import 'package:elderly_people_sns/kakaoFacetalk/facetalk1-2.dart';
 
-class KakaotalkList extends StatefulWidget {
+class FacetalkList extends StatefulWidget {
   @override
-  KakaotalkListState createState() => KakaotalkListState();
+  FacetalkListState createState() => FacetalkListState();
 
-  const KakaotalkList({Key? key}) : super(key: key);
+  const FacetalkList({Key? key}) : super(key: key);
 }
 
-class KakaotalkListState extends State<KakaotalkList> {
+class FacetalkListState extends State<FacetalkList> {
 
   List<String> kakaoTalkLearningList = [
-    '채팅방 만들기',
-    '알림설정',
-    '영상통화(페이스톡)'];
+    '친구에서 걸기',
+    '채팅창에서 걸기'];
 
   @override
   Widget build(BuildContext context) {
@@ -30,11 +30,11 @@ class KakaotalkListState extends State<KakaotalkList> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text(
-            "카카오톡",
-            style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.normal,
-          )),
+              "카카오톡",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.normal,
+              )),
           backgroundColor: const Color(0xFFF7E600),
         ),
         body: Center(
@@ -42,7 +42,12 @@ class KakaotalkListState extends State<KakaotalkList> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
                 InkWell(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Facetalk1_1()));
+                  },
                   customBorder: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -74,43 +79,11 @@ class KakaotalkListState extends State<KakaotalkList> {
                   ),
                 ),
               InkWell(
-                onTap: (){},
-                customBorder: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Ink(
-                  width: 370,
-                  height: 88,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffffffff),
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.grey,
-                        offset: Offset(0.0, 4.0), //(x,y)
-                        blurRadius: 1.0,
-                      ),
-                    ],
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      kakaoTalkLearningList[1],
-                      maxLines: 3,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              InkWell(
                 onTap: (){
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const FacetalkList()));
+                          builder: (context) => const Facetalk1_2()));
                 },
                 customBorder: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
@@ -132,7 +105,7 @@ class KakaotalkListState extends State<KakaotalkList> {
                   child: Align(
                     alignment: Alignment.center,
                     child: Text(
-                      kakaoTalkLearningList[2],
+                      kakaoTalkLearningList[1],
                       maxLines: 3,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
