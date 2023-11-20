@@ -23,31 +23,27 @@ class NaverBandSignUp01State extends State<NaverBandSignUp01> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(
-              "네이버 밴드",
+          title: const Text("네이버 밴드",
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.normal,
               )),
           backgroundColor: const Color(0xFF1EC800),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const NaverBandSignUp01Black()));
-                },
-                child: Ink(
-                  width: 500,
-                  height: 658,
-                  child: Image.asset('assets/images/naver_band_sign_up_1.png'),
-                ),
-              )
-            ],
+        body: GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const NaverBandSignUp01Black()));
+          },
+          child: Center(
+            child: Image.asset(
+              'assets/images/bandSignUp/naver_band_sign_up_1_real.png',
+              width: double.infinity,
+              height: double.infinity,
+              fit: BoxFit.fill,
+            ),
           ),
         ),
       ),

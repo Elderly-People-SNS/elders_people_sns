@@ -31,26 +31,20 @@ class NaverBandSignUp05State extends State<NaverBandSignUp05> {
               )),
           backgroundColor: const Color(0xFF1EC800),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const NaverBandList()));
-                },
-                child: Ink(
-                  width: 500,
-                  height: 658,
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Image.asset('assets/images/naver_band_sign_up_5.png'),
-                  ),
-                ),
-              )
-            ],
+        body: GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const NaverBandList()));
+          },
+          child: Center(
+            child: Image.asset(
+              'assets/images/bandSignUp/naver_band_sign_up_5.png',
+              width: double.infinity,
+              height: double.infinity,
+              fit: BoxFit.fill,
+            ),
           ),
         ),
       ),

@@ -30,58 +30,38 @@ class NaverBandSignUp03BlackState extends State<NaverBandSignUp03Black> {
                 )),
             backgroundColor: const Color(0xFF1EC800),
           ),
-          body: Center(child:
-            Stack(
-            children: <Widget>[
-              Container(
-                child: InkWell(
-                  onTap: () {},
-                  child: Ink(
-                    width: 500,
-                    height: 658,
-                    child: Align(
-                      alignment: Alignment.center,
-                      child:
-                          Image.asset('assets/images/naver_band_sign_up_3.png'),
+            body: Center(
+              child: Stack(
+                children: <Widget>[
+                  Container(
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/bandSignUp/naver_band_sign_up_3_black.png',
+                        width: double.infinity,
+                        height: double.infinity,
+                        fit: BoxFit.fill,
+                      ),
                     ),
                   ),
-                ),
-              ),
-              Container(
-                child: InkWell(
-                  onTap: () {},
-                  child: Ink(
-                    width: 500,
-                    height: 1000,
-                    child: Opacity(
-                      opacity: 0.75,
-                      child: Image.asset('assets/images/naver_band_sign_up_black.png'),
+                  Positioned(
+                    top: 710,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                const NaverBandSignUp04()));
+                      },
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 60,
+                        color: Colors.transparent,
+                      ),
                     ),
                   ),
-                ),
+                ],
               ),
-              Positioned(
-                top: 300,
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NaverBandSignUp04()));
-                  },
-                  child: Ink(
-                    width: 500,
-                    height: 200,
-                    child: Opacity(
-                      opacity: 0.25,
-                      child: Image.asset('assets/images/naver_band_sign_up_black.png'),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),)
-        )
-    );
+            )));
   }
 }
