@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:elderly_people_sns/main.dart';
 import 'package:elderly_people_sns/naverBandSignUp/naverBandSignUp01.dart';
-import 'package:elderly_people_sns/band_invite/invite_friend_01.dart';
 
 class NaverBandList extends StatefulWidget {
   @override
