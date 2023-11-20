@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:elderly_people_sns/main.dart';
 import 'package:elderly_people_sns/naverBandSignUp/naverBandSignUp01.dart';
+import 'package:elderly_people_sns/band_invite/invite_friend_01.dart';
 
 class NaverBandList extends StatefulWidget {
   @override
@@ -32,113 +34,150 @@ class NaverBandListState extends State<NaverBandList> {
               )),
           backgroundColor: const Color(0xFF1EC800),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        body: Stack(
             children: [
-              InkWell(
-                onTap: () {
-                  Navigator.push(
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const NaverBandSignUp01()));
+                      },
+                      customBorder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Ink(
+                        width: 370,
+                        height: 88,
+                        decoration: BoxDecoration(
+                          color: const Color(0xffffffff),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 4.0), //(x,y)
+                              blurRadius: 1.0,
+                            ),
+                          ],
+                        ),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            naverBandLearningList[0],
+                            maxLines: 3,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        /*
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const NaverBandSignUp01()));
+
+                         */
+                      },
+                      customBorder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Ink(
+                        width: 370,
+                        height: 88,
+                        decoration: BoxDecoration(
+                          color: const Color(0xffffffff),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 4.0), //(x,y)
+                              blurRadius: 1.0,
+                            ),
+                          ],
+                        ),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            naverBandLearningList[1],
+                            maxLines: 3,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        /*
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const NaverBandSignUp01()));
+
+                         */
+                      },
+                      customBorder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Ink(
+                        width: 370,
+                        height: 88,
+                        decoration: BoxDecoration(
+                          color: const Color(0xffffffff),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 4.0), //(x,y)
+                              blurRadius: 1.0,
+                            ),
+                          ],
+                        ),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            naverBandLearningList[2],
+                            maxLines: 3,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                bottom: 10.0,
+                left: 10.0,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const NaverBandSignUp01()));
-                },
-                customBorder: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Ink(
-                  width: 370,
-                  height: 88,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffffffff),
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.grey,
-                        offset: Offset(0.0, 4.0), //(x,y)
-                        blurRadius: 1.0,
-                      ),
-                    ],
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      naverBandLearningList[0],
-                      maxLines: 3,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
+                      MaterialPageRoute(builder: (context) => MainScreen()),
+                    );
+                  },
+                  child: Image.asset(
+                    'assets/images/facetalkImages/backButton.png',
+                    width: 70,
+                    height: 70,
                   ),
                 ),
               ),
-              InkWell(
-                onTap: () {},
-                customBorder: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Ink(
-                  width: 370,
-                  height: 88,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffffffff),
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.grey,
-                        offset: Offset(0.0, 4.0), //(x,y)
-                        blurRadius: 1.0,
-                      ),
-                    ],
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      naverBandLearningList[1],
-                      maxLines: 3,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: () {},
-                customBorder: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Ink(
-                  width: 370,
-                  height: 88,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffffffff),
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.grey,
-                        offset: Offset(0.0, 4.0), //(x,y)
-                        blurRadius: 1.0,
-                      ),
-                    ],
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      naverBandLearningList[2],
-                      maxLines: 3,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ]
         ),
       ),
     );
