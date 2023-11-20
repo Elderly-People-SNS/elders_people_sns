@@ -31,29 +31,38 @@ class NaverBandSignUp04State extends State<NaverBandSignUp04> {
               )),
           backgroundColor: const Color(0xFF1EC800),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const NaverBandSignUp05()));
-                },
-                child: Ink(
-                  width: 500,
-                  height: 658,
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Image.asset('assets/images/naver_band_sign_up_4.png'),
+          body: Center(
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/bandSignUp/naver_band_sign_up_4.png',
+                      width: double.infinity,
+                      height: double.infinity,
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
+                Positioned(
+                  top: 550,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                              const NaverBandSignUp05()));
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 60,
+                      color: Colors.transparent,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )));
   }
 }
