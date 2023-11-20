@@ -44,7 +44,7 @@ class Facetalk4State extends State<Facetalk4> {
               ),
             ),
             Positioned(
-              top: 320,
+              top: 290,
               right: 45,
               child: GestureDetector(
                 onTap: () {
@@ -55,7 +55,7 @@ class Facetalk4State extends State<Facetalk4> {
                 },
                 child: Container(
                   width: 100,
-                  height: 80,
+                  height: 120,
                   color: Colors.transparent,
                 ),
               ),

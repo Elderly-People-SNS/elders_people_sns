@@ -44,7 +44,7 @@ class Facetalk1_2State extends State<Facetalk1_2> {
               ),
             ),
             Positioned(
-              top: 270,
+              top: 240,
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -54,7 +54,7 @@ class Facetalk1_2State extends State<Facetalk1_2> {
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 120,
+                  height: 150,
                   color: Colors.transparent,
                 ),
               ),

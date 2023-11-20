@@ -44,7 +44,7 @@ class Facetalk2_2State extends State<Facetalk2_2> {
               ),
             ),
             Positioned(
-              top: 210,
+              top: 190,
               left: 0,
               child: GestureDetector(
                 onTap: () {
@@ -55,13 +55,13 @@ class Facetalk2_2State extends State<Facetalk2_2> {
                 },
                 child: Container(
                   width: 70,
-                  height: 70,
+                  height: 100,
                   color: Colors.transparent,
                 ),
               ),
             ),
             Positioned(
-              top: 300,
+              top: 280,
               left: 0,
               child: GestureDetector(
                 onTap: () {
@@ -72,13 +72,13 @@ class Facetalk2_2State extends State<Facetalk2_2> {
                 },
                 child: Container(
                   width: 70,
-                  height: 70,
+                  height: 100,
                   color: Colors.transparent,
                 ),
               ),
             ),
             Positioned(
-              top: 560,
+              top: 540,
               left: 0,
               child: GestureDetector(
                 onTap: () {
@@ -89,7 +89,7 @@ class Facetalk2_2State extends State<Facetalk2_2> {
                 },
                 child: Container(
                   width: 70,
-                  height: 70,
+                  height: 100,
                   color: Colors.transparent,
                 ),
               ),
