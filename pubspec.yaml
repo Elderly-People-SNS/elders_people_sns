@@ -68,6 +68,7 @@ flutter:
     - assets/images/kakaotalk/
     - assets/images/bandSignUp/
     - assets/images/band/
+    - assets/images/instagram/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
