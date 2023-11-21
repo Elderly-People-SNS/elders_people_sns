@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'band_exit_02.dart';
-
+/*
 void main() {
   runApp(MyApp());
 }
+
+ */
 
 class MyApp extends StatelessWidget {
   @override

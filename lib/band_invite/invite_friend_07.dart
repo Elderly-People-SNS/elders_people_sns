@@ -62,7 +62,7 @@ class EventBox extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            left: 385,
+            left: 335,
             top: 45,
             child: Container(
               width: 95,
