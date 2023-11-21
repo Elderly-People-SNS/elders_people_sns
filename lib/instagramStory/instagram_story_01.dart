@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-
 import 'instagram_story_02.dart';
-
+/*
 void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: MyApp(),
   ));
 }
+
+ */
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

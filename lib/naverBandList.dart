@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:elderly_people_sns/main.dart';
 import 'package:elderly_people_sns/naverBandSignUp/naverBandSignUp01.dart';
+import 'band_invite/invite_friend_01.dart';
+import 'mingi/band_exit_01.dart';
 import 'package:elderly_people_sns/mingi/band_exit_01.dart';
+
 
 class NaverBandList extends StatefulWidget {
   @override
@@ -79,13 +82,10 @@ class NaverBandListState extends State<NaverBandList> {
                     ),
                     InkWell(
                       onTap: () {
-                        /*
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const NaverBandSignUp01()));
-
-                         */
+                                builder: (context) => Invite_01()));
                       },
                       customBorder: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
@@ -122,7 +122,11 @@ class NaverBandListState extends State<NaverBandList> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
+
+                                builder: (context) => MyApp()));
+
                                 builder: (context) => Screen1()));
+
                       },
                       customBorder: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),

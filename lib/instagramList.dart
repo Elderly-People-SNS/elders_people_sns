@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:elderly_people_sns/main.dart';
+import 'package:elderly_people_sns/instagramStory/instagram_story_01.dart';
 
 class InstagramList extends StatelessWidget {
    InstagramList({super.key});
@@ -39,11 +40,11 @@ class InstagramList extends StatelessWidget {
                   children: [
                     for (int i = 0; i < 3; i += 1)
                       InkWell(
-                        onTap: (){
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (context) => const NaverBandSignUp01()));
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => MyApp()),
+                          );
                         },
                         customBorder: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
