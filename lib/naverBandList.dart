@@ -122,9 +122,6 @@ class NaverBandListState extends State<NaverBandList> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-
-                                builder: (context) => MyApp()));
-
                                 builder: (context) => Screen1()));
 
                       },

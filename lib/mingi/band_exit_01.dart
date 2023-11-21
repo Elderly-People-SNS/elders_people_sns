@@ -8,7 +8,6 @@ void main() {
 
  */
 
-class MyApp extends StatelessWidget {
   
 class Screen1 extends StatelessWidget {
 
