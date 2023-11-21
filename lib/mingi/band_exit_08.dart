@@ -68,7 +68,7 @@ class EventBox extends StatelessWidget {
             child: Container(
               width: 446,
               height: 46,
-              color: Colors.blue.withOpacity(0.5),
+              color: Colors.blue.withOpacity(0),
             ),
           ),
         ],

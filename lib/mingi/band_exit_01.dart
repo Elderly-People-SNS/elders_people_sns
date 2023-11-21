@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 import 'band_exit_02.dart';
 /*
 void main() {
-  runApp(MyApp());
+  runApp(Screen1());
 }
+
 
  */
 
 class MyApp extends StatelessWidget {
+  
+class Screen1 extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
