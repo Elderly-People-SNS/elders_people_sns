@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'add_friend_03.dart';
-import 'add_friend_05.dart';
+import 'package:elderly_people_sns/jonghyeon/add_friendList.dart';
 
 
 class FourthScreen extends ThirdScreen {
@@ -12,7 +12,7 @@ class FourthScreen extends ThirdScreen {
           // 화면을 터치하면 다음 화면으로 이동
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => FifthScreen()),
+            MaterialPageRoute(builder: (context) => Add_friendList()),
           );
         },
         child: Container(

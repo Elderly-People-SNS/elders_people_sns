@@ -1,6 +1,8 @@
+import 'package:elderly_people_sns/jonghyeon/add_friendList.dart';
 import 'package:flutter/material.dart';
 import 'package:elderly_people_sns/kakaoFacetalk/facetalkList.dart';
 import 'package:elderly_people_sns/main.dart';
+import 'BaekSeongJun/kakaoAlert1.dart';
 
 class KakaotalkList extends StatefulWidget {
   @override
@@ -45,7 +47,12 @@ class KakaotalkListState extends State<KakaotalkList> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     InkWell(
-                      onTap: (){},
+                      onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Add_friendList()));
+                      },
                       customBorder: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -77,7 +84,12 @@ class KakaotalkListState extends State<KakaotalkList> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){},
+                      onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyApp()));
+                      },
                       customBorder: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
