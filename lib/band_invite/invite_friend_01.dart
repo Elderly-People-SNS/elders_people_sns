@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
 import 'invite_friend_02.dart';
-/*
-void main() {
-  runApp(MyApp());
-}
-
- */
 
 class Invite_01 extends StatelessWidget {
   @override

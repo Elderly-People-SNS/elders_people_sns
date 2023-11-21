@@ -38,44 +38,107 @@ class InstagramList extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    for (int i = 0; i < 3; i += 1)
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => MyApp()),
-                          );
-                        },
-                        customBorder: RoundedRectangleBorder(
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MyApp()),
+                        );
+                      },
+                      customBorder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Ink(
+                        width: 370,
+                        height: 88,
+                        decoration: BoxDecoration(
+                          color: const Color(0xffffffff),
                           borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 4.0), //(x,y)
+                              blurRadius: 1.0,
+                            ),
+                          ],
                         ),
-                        child: Ink(
-                          width: 370,
-                          height: 88,
-                          decoration: BoxDecoration(
-                            color: const Color(0xffffffff),
-                            borderRadius: BorderRadius.circular(20),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.grey,
-                                offset: Offset(0.0, 4.0), //(x,y)
-                                blurRadius: 1.0,
-                              ),
-                            ],
-                          ),
-                          child: Align(
-                            alignment: Alignment.center,
-                            child: Text(
-                              instagramLearningList[i],
-                              maxLines: 3,
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                fontSize: 20,
-                              ),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            instagramLearningList[0],
+                            maxLines: 3,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 20,
                             ),
                           ),
                         ),
-                      )
+                      ),
+                    ),
+                    InkWell(
+                      onTap: (){},
+                      customBorder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Ink(
+                        width: 370,
+                        height: 88,
+                        decoration: BoxDecoration(
+                          color: const Color(0xffffffff),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 4.0), //(x,y)
+                              // blurRadius: 1.0,
+                            ),
+                          ],
+                        ),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            instagramLearningList[1],
+                            maxLines: 3,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: (){},
+                      customBorder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Ink(
+                        width: 370,
+                        height: 88,
+                        decoration: BoxDecoration(
+                          color: const Color(0xffffffff),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 4.0), //(x,y)
+                              // blurRadius: 1.0,
+                            ),
+                          ],
+                        ),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            instagramLearningList[2],
+                            maxLines: 3,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),
