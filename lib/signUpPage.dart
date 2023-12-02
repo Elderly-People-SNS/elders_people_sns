@@ -1,4 +1,5 @@
 import 'package:elderly_people_sns/loginScreen.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'getX.dart';
@@ -13,6 +14,7 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPageState extends State<SignUpPage> {
 
   final getXController = Get.put(Getx()); // 선언
+  FirebaseDatabase realtime = FirebaseDatabase.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +54,11 @@ class _SignUpPageState extends State<SignUpPage> {
                     height: 50.0,
                     child: ElevatedButton(
                       onPressed: () {
+                        realtime.ref().child("members").push().set({
+                          "id": getXController.userId,
+                          "pw": getXController.userPw,
+                        });
+
                         Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
