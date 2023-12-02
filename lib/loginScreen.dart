@@ -1,11 +1,17 @@
 import 'package:elderly_people_sns/signInPage.dart';
 import 'package:elderly_people_sns/signUpPage.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'firebase_options.dart';
 import 'getX.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -63,12 +69,8 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 90),
               ElevatedButton(
                   onPressed: () {
-                    if(getXController.userId == ""){
-                      showToast();
-                    } else{
-                      Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const SignInPage()));
-                    }
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const SignInPage()));
                   },
                   style: ElevatedButton.styleFrom(
                       minimumSize: const Size(219, 48),

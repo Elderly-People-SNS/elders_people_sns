@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:elderly_people_sns/main.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
@@ -57,8 +60,11 @@ class _SignInPageState extends State<SignInPage> {
                         minWidth: 100.0,
                         height: 50.0,
                         child: ElevatedButton(
-                          onPressed: () {
-                            if(getXController.userId == userId){
+                          onPressed: () async {
+
+                            bool isLoggedIn = await loginUser(userId, userPw);
+
+                            if(isLoggedIn){
                               Navigator.pushAndRemoveUntil(
                                   context,
                                   MaterialPageRoute(
@@ -89,5 +95,36 @@ class _SignInPageState extends State<SignInPage> {
             )
           ],
         ));
+  }
+
+  // 아이디와 패스워드가 일치하는지 확인하는 함수
+  Future<bool> loginUser(String id, String pw) async {
+
+    print(id);
+    print(pw);
+    FirebaseDatabase realtime = FirebaseDatabase.instance;
+    DataSnapshot snapshot = await realtime.ref().child("members").get();
+    Map<dynamic, dynamic> value = snapshot.value as Map<dynamic, dynamic>;
+    final getXController = Get.put(Getx()); // getX 선언
+    bool temp = false;
+
+    if (snapshot.exists) {
+      // value 맵을 순회하며 원하는 사용자의 ID를 찾기
+      value.forEach((key, userData) {
+
+        if (userData["id"] == id && userData["pw"] == pw) {
+          print(userData["id"]);
+          print(userData["pw"]);
+
+          getXController.userId = userData["id"];
+
+          temp = true; // 원하는 ID를 찾으면 더 이상 순회하지 않음
+        }
+      });
+    } else{
+      print(snapshot.value);
+      print('No data available.');
+    }
+    return temp;
   }
 }

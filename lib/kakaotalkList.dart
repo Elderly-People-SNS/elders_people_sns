@@ -165,10 +165,10 @@ class KakaotalkListState extends State<KakaotalkList> {
                 left: 10.0,
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => MainScreen()),
-                    );
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MainScreen()),(route) => false);
                   },
                   child: Image.asset(
                     'assets/images/backButton.png',

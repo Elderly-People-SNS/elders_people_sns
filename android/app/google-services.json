@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "63371859601",
+    "project_id": "elderlypeoplesns",
+    "storage_bucket": "elderlypeoplesns.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63371859601:android:df2093e48af72fdda99130",
+        "android_client_info": {
+          "package_name": "com.example.elderly_people_sns"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvcPwdnKyaz96URLP9DGvWvzrZlInwjKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
